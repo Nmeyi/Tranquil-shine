@@ -8,6 +8,262 @@
       </head>
       <body>
           <header>
+            <body>
+              <!-- Hero Section -->
+              <section class="hero">
+                  <div class="hero-content">
+                      <h1>Welcome to Tranquil Shine</h1>
+                      <p>Tranquil Touch, Radiant Glow</p>
+                      <a href="#shop" class="btn primary-btn">Explore New Arrivals</a>
+                      <a href="#bespoke" class="btn secondary-btn">Discover Bespoke Pieces</a>
+                  </div>
+              </section>
+          
+              <!-- Featured Collections -->
+              <section class="collections" id="book an appointment">
+                  <h2>Featured Collections</h2>
+                  <div class="collection-grid">
+                      <div class="collection">
+                          <img src="HEADmassages.jpeg" alt="">
+                          <h3>Seasonal Luxury</h3>
+                          <a href="#" class="btn">book an appointment Now</a>
+                      </div>
+                      <div class="collection">
+                          <img src="backmassages.jpeg" alt="">
+                          <h3>Bespoke Couture</h3>
+                          <a href="#" class="btn">book an appointment</a>
+                      </div>
+                      <div class="collection">
+                          <img src="./OIP (1).jpeg" alt="Timeless Classics">
+                          <h3>Timeless Classics</h3>
+                          <a href="#" class="btn">book an appointment</a>
+                      </div>
+                  </div>
+              </section>
+          
+              <!-- Testimonials -->
+              <section class="testimonials">
+                  <h2>Loved By Icons</h2>
+                  <p>"Unleash Your Fashion is redefining luxury for the modern era." – Celebrity X</p>
+                  <p>"Exclusive, elegant, and empowering." – Fashion Magazine</p>
+              </section>
+          
+              <!-- Modal Popup -->
+          <div class="modal">
+              <div class="modal-content">
+                  <span class="close-modal">&times;</span>
+                  <!-- Modal content will be dynamically injected via JS -->
+              </div>
+          </div>
+          
+          
+              <!-- Footer -->
+              <footer>
+                  <p>&copy; 2024 Where Beauty Meets Serenity . All rights reserved</p>
+              </footer>
+          </body>
+          </html>
+          <style>
+              /* General Styles */
+          body {
+              font-family: 'Arial', sans-serif;
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              background-image: url(./wallpaper.jpg);
+              color: #333;
+          }
+          
+          h1, h2, h3 {
+              margin: 0;
+          }
+          
+          a {
+              text-decoration: none;
+              color: inherit;
+          }
+          
+          section {
+              padding: 50px 20px;
+              text-align: center;
+          }
+          
+          /* Hero Section */
+          .hero {
+              background: url('./Screenshot\ 2024-07-19\ 201644.png') no-repeat center center/cover;
+              color: magenta;
+              padding: 150px 20px;
+          }
+          
+          .hero-content h1 {
+              font-size: 4rem;
+              margin-bottom: 10px;
+          }
+          
+          .hero-content p {
+              font-size: 1.5rem;
+              margin-bottom: 20px;
+          }
+          
+          .btn {
+              display: inline-block;
+              padding: 10px 20px;
+              margin: 10px;
+              font-size: 1rem;
+              border-radius: 5px;
+              transition: background-color 0.3s;
+          }
+          
+          .primary-btn {
+              background-color: #d4af37;
+              color: #fff;
+          }
+          
+          .secondary-btn {
+              background-color: transparent;
+              border: 2px solid #fff;
+              color: #fff;
+          }
+          
+          .btn:hover {
+              background-color: #333;
+              color: #fff;
+          }
+          
+          /* Featured Collections */
+          .collections {
+              background-image: url(./wallpaper.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+          }
+          
+          .collection-grid {
+              display: flex;
+              justify-content: center;
+              gap: 30px;
+          }
+          
+          .collection img {
+              width: 100%;
+              max-width: 300px;
+              height: auto;
+              border-radius: 10px;
+          }
+          
+          .collection h3 {
+              font-size: 1.5rem;
+              margin: 10px 0;
+          }
+          
+          .collection .btn {
+              background-color: #333;
+              color: #fff;
+          }
+          
+          /* Testimonials */
+          .testimonials {
+              background-image: url(./wallpaper.jpg);
+              padding: 50px;
+          }
+          
+          .testimonials p {
+              font-size: 1.2rem;
+              margin-bottom: 20px;
+              font-style: italic;
+          }
+          
+          /* Footer */
+          footer {
+              background-color: #333;
+              color: #fff;
+              padding: 20px;
+              text-align: center;
+          }
+          
+          /* Modal Styles */
+          .modal {
+              display: none;
+              position: fixed;
+              z-index: 1000;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              background-color: rgba(0, 0, 0, 0.7);
+              justify-content: center;
+              align-items: center;
+          }
+          
+          .modal-content {
+              background-color: #fff;
+              padding: 30px;
+              border-radius: 10px;
+              max-width: 500px;
+              width: 90%;
+              margin: auto;
+              text-align: center;
+          }
+          
+          .close-modal {
+              position: absolute;
+              top: 10px;
+              right: 20px;
+              font-size: 2rem;
+              cursor: pointer;
+          }
+          
+          
+          </style>
+          <script>
+              // Smooth Scrolling for Internal Links
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  document.querySelector(this.getAttribute('href')).scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              });
+          });
+          
+          // Mobile Menu Toggle
+          const menuToggle = document.querySelector('.menu-toggle');
+          const navLinks = document.querySelector('.nav-links');
+          
+          menuToggle.addEventListener('click', () => {
+              navLinks.classList.toggle('active');
+          });
+          
+          // Modal Popup for Collection Details
+          const collections = document.querySelectorAll('.collection');
+          const modal = document.querySelector('.modal');
+          const modalContent = document.querySelector('.modal-content');
+          const closeModal = document.querySelector('.close-modal');
+          
+          collections.forEach(collection => {
+              collection.addEventListener('click', () => {
+                  const collectionTitle = collection.querySelector('h3').textContent;
+                  modalContent.innerHTML = `
+                      <h2>${collectionTitle}</h2>
+                      <p>Explore the latest designs in our ${collectionTitle} collection. Each piece is crafted with the finest materials, ensuring unmatched elegance and style.</p>
+                      <button class="btn primary-btn">Shop ${collectionTitle}</button>
+                  `;
+                  modal.style.display = 'block';
+              });
+          });
+          
+          closeModal.addEventListener('click', () => {
+              modal.style.display = 'none';
+          });
+          
+          // Close modal when clicking outside content
+          window.addEventListener('click', (e) => {
+              if (e.target === modal) {
+                  modal.style.display = 'none';
+              }
+          });
+          
+          </script>
               <style>
               .container {
               display: flex;
@@ -108,6 +364,8 @@
     </style>
 </head>
 <body>
+  
+
       <body>
         <marquee style="color: aqua;font-size: xx-large;">Welcome to Tranquil Shine</marquee>
         <h3>Welcome to tranquil shine</h3>
@@ -120,6 +378,7 @@
             padding: 1rem 2rem;
           }
         </style>
+        
         
       
       </body>
@@ -295,6 +554,7 @@
   
 </style>
 </head>
+
 
 </body>
 </html>
